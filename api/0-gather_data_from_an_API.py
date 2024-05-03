@@ -7,7 +7,7 @@ done_tasks = []
 url = "https://jsonplaceholder.typicode.com"
 
 if __name__ == "__main__":
-    response_todos = requests.get(f"{url}/todos?userid={sys.argv[1]}")
+    response_todos = requests.get(f"{url}/todos?userId={sys.argv[1]}")
     response_users = requests.get(f"{url}/users/{sys.argv[1]}")
 
     todos = response_todos.json()
