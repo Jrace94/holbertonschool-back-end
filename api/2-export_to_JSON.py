@@ -23,7 +23,7 @@ if __name__ == "__main__":
         task_user.append(data_user)
         data_user = {}
 
-    dict_user[str(sys.argv[1])] = task_user
+    dict_user[sys.argv[1]] = task_user
 
     with open(f"{sys.argv[1]}.json", "w") as json_file:
         json.dump(dict_user, json_file)
