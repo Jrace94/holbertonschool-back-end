@@ -21,4 +21,4 @@ tasks = len(done_tasks)
 print(f"Employee {name} is done with tasks({tasks}/{len(todos)}):")
 
 for todo in done_tasks:
-    print(f"\t {todo.get("title")}")
+    print("\t {}".format(todo.get("title")))
