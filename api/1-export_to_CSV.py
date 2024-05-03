@@ -11,9 +11,9 @@ url = response_API.url
 if __name__ == "__main__":
     todos, user = response_API.response(sys.argv[1])
 
-    with open("USER_ID.csv", "w") as USER_ID:
+    with open(f"{sys.argv[1]}.csv", "w") as user_id:
         user_writer = csv.writer(
-            USER_ID,
+            user_id,
             delimiter=",",
             quoting=csv.QUOTE_ALL,
         )
