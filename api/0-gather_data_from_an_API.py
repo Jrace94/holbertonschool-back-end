@@ -3,7 +3,7 @@
 import requests
 import sys
 
-done_taks = []
+done_tasks = []
 url = "https://jsonplaceholder.typicode.com"
 
 response_todos = requests.get(f"{url}/todos?userid={sys.argv[1]}")
@@ -14,11 +14,11 @@ user = response_users.json()
 
 for todo in todos:
     if todo.get("completed"):
-        done_taks.append(todo)
+        done_tasks.append(todo)
 
-print(
-    f"Employee {user["name"]} is done with tasks({len(done_taks)}/{len(todos)}):",
-)
+name = user.get("name")
+tasks = len(done_tasks)
+print(f"Employee {name} is done with tasks({tasks}/{len(todos)}):")
 
-for todo in done_taks:
+for todo in done_tasks:
     print(f"\t {todo.get("title")}")
