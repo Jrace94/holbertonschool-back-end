@@ -6,10 +6,11 @@ import sys
 response_API = __import__("0-gather_data_from_an_API")
 
 url = response_API.url
-todos, user = response_API.response(sys.argv[1])
 
 
 if __name__ == "__main__":
+    todos, user = response_API.response(sys.argv[1])
+
     with open("USER_ID.csv", "w") as USER_ID:
         user_writer = csv.writer(
             USER_ID,
