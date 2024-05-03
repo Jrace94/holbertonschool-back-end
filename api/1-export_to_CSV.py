@@ -21,7 +21,7 @@ if __name__ == "__main__":
             user_writer.writerow(
                 [
                     todo["userId"],
-                    user["name"],
+                    user["username"],
                     todo["completed"],
                     todo["title"],
                 ]
